@@ -1,13 +1,21 @@
 import { useFormik } from 'formik';
+import {dateFormat} from "../../utils/dateFormat";
+import {connect} from "react-redux";
+import {addNote} from "../../redux/notesSlice";
 
-const AddNoteFrom = () => {
+const AddNewNoteForm = (props) => {
     const formik = useFormik({
         initialValues: {
             name: '',
+            category: '',
+            content: '',
+            date: '',
+
 
         },
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            values.created = dateFormat();
+            props.addNote({...values});
         },
     });
 
@@ -17,13 +25,14 @@ const AddNoteFrom = () => {
             <input
                 id="name"
                 name="name"
+                type="text"
                 onChange={formik.handleChange}
                 value={formik.values.email}
             />
 
-            <label htmlFor="country">Category</label>
+            <label htmlFor="category">Category</label>
             <select
-                name="email"
+                name="category"
                 onChange={formik.handleChange}
                 value={formik.values.email}
             >
@@ -36,6 +45,7 @@ const AddNoteFrom = () => {
             <input
                 id="content"
                 name="content"
+                type="text"
                 onChange={formik.handleChange}
                 value={formik.values.email}
             />
@@ -44,6 +54,7 @@ const AddNoteFrom = () => {
             <input
                 id="date"
                 name="date"
+                type="text"
                 onChange={formik.handleChange}
                 value={formik.values.email}
             />
@@ -53,4 +64,4 @@ const AddNoteFrom = () => {
     )
 }
 
-export default AddNoteFrom;
+export default connect(null, {addNote})(AddNewNoteForm);

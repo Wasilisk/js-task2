@@ -1,20 +1,9 @@
-import { MdEventNote, MdLightbulb, MdLocationPin } from "react-icons/md";
 import {connect} from "react-redux";
+import {noteIcon} from "../utils/noteIcon";
 
 const SummaryTableRow = ({notes, categoryName}) => {
     const activeNotesCount = notes.filter(note => note.archived === false && note.category === categoryName).length
     const archivedNotesCount = notes.filter(note => note.archived === true && note.category === categoryName).length
-
-    const noteIcon = (category) => {
-        switch (category) {
-            case 'Task':
-                return <i><MdEventNote/></i>
-            case 'Random Thought':
-                return <i><MdLocationPin/></i>
-            case "Idea":
-                return <i><MdLightbulb/></i>
-        }
-    }
 
     return (
         <li className="table-row">

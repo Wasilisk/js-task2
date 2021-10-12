@@ -1,3 +1,22 @@
+.buttons {
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.add-note {
+    background-color: #999999;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 
 .modal-content {
     background-color: #fefefe;

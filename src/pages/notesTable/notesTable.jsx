@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {connect} from "react-redux";
-import TableRow from "./tableRow";
+import TableRow from "../../components/tableRow";
 import { MdArchive, MdUnarchive, MdDelete } from "react-icons/md";
 
 const NotesTable = (props) => {
@@ -10,6 +10,7 @@ const NotesTable = (props) => {
         if(note.archived === tableType) {
             return <TableRow key={index} note={note} noteId={index}/>
         }
+        return null
     })
 
     return (
@@ -23,10 +24,10 @@ const NotesTable = (props) => {
                 <div className="col col-6">
                     {
                         showArchive ?
-                        <i onClick={() => setShowArchive(false)}><MdArchive/></i> :
-                        <i onClick={() => setShowArchive(true)}><MdUnarchive/></i>
+                        <i className="tableButton" onClick={() => setShowArchive(false)}><MdArchive/></i> :
+                        <i className="tableButton" onClick={() => setShowArchive(true)}><MdUnarchive/></i>
                     }
-                    <i><MdDelete/></i>
+                    <i className="tableButton"><MdDelete/></i>
                 </div>
             </li>
             {tableRows(showArchive)}

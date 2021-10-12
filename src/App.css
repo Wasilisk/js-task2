@@ -1,0 +1,118 @@
+body {
+    font-family: 'lato', sans-serif;
+}
+.container {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 120px;
+    min-height: 500px;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+.responsive-table li {
+    border-radius: 3px;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.responsive-table li:first-child {
+    padding: 5px 20px;
+}
+.responsive-table .table-header {
+    background-color: #999999;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.responsive-table .table-row {
+    background-color: #e8eaf5;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.col {
+    display: flex;
+    align-items: center;
+}
+
+.responsive-table .col-1 {
+    flex-basis: 20%;
+}
+.table-header .col-1:first-child {
+    text-align: center;
+}
+.responsive-table .col-2 {
+    flex-basis: 15%;
+}
+.responsive-table .col-3 {
+    flex-basis: 15%;
+}
+.responsive-table .col-4 {
+    flex-basis: 25%;
+}
+.responsive-table .col-5 {
+    flex-basis: 15%;
+}
+.responsive-table .col-6 {
+    flex-basis: 10%;
+    display: flex;
+    justify-content: right;
+}
+
+.tableButton {
+    padding: 0;
+    font-size: 24px;
+    color: white;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tableButton:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+.note-icon {
+    color: #616161;
+    font-size: 24px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.note-icon:hover {
+    color: white;
+}
+
+.category-icon {
+    font-size: 24px;
+    padding: 5px;
+    color: white;
+    background-color: #616161;
+    border-radius: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.summary-table {
+    width: 1500px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

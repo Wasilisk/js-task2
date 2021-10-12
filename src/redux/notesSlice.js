@@ -75,7 +75,6 @@ export const notesSlice = createSlice({
             state.push(newNote)
         },
         editNote: (state, action) => {
-            console.log("Hello")
             state.splice(action.payload.noteId, 1, action.payload.note);
         },
         deleteNote: (state, action) => {

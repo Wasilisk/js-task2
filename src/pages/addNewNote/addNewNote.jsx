@@ -1,6 +1,7 @@
 import {Modal} from "@mui/material";
 import {useState} from "react";
 import './addNewNote.css'
+import AddNewNoteForm from "./AddNewNoteForm";
 
 const AddNewNote = () => {
     const [open, setOpen] = useState(false);
@@ -17,9 +18,9 @@ const AddNewNote = () => {
                 onClose={handleClose}
             >
                     <div className="modal-content">
-                        <span className="close">&times;</span>
+                        <span className="close" onClick={handleClose}>&times;</span>
                         <h3>Create new note</h3>
-                        <AddNoteForm/>
+                        <AddNewNoteForm/>
                     </div>
             </Modal>
         </>

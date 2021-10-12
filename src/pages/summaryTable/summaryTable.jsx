@@ -1,6 +1,6 @@
-import SummaryTableRow from "./summaryTableRow";
+import SummaryTableRow from "../../components/summaryTableRow";
 
-const SummaryTable = (props) => {
+const SummaryTable = () => {
     return (
         <div className="summary-table">
             <ul className="responsive-table">
